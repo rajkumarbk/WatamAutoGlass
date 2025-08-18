@@ -25,7 +25,7 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #f7f7f7; /* Background color for the entire website, including individual sections */
-  --default-color: #555555; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #090a09; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #f3bf7f; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #006C35; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -229,6 +229,7 @@ h6 {
   .navmenu {
     padding: 0;
     margin-top: 0px;
+    
   }
 
   .navmenu ul {
@@ -316,7 +317,7 @@ html[lang="en"] .navmenu .lang-ar { display: none; }
 
 
 /* navmenu - Mobile */
-@media (max-width: 1199px) {
+@media (max-width: 600px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -419,7 +420,7 @@ html[lang="en"] .navmenu .lang-ar { display: none; }
     overflow: hidden;
     inset: 0;
     background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
+    transition: 0.4s;
   }
 
   .mobile-nav-active .navmenu>ul {
@@ -754,10 +755,9 @@ section,
 }
 
 #wlc {
-  position: absolute;
-  left: 50%;
-  margin-top: 5%;
-  font-size: 3rem;
+  text-align: center;
+  margin-top: 4%;
+  font-size: 4rem;
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -766,6 +766,7 @@ section,
       -webkit-text-fill-color: transparent;
       animation: fadeIn 2s ease-in-out;
     }
+    
 
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(-50px); }
@@ -776,9 +777,15 @@ section,
       0% { text-shadow: 0 0 10px rgba(255,215,0,0.5), 0 0 20px rgba(0,108,53,0.5); }
       100% { text-shadow: 0 0 20px rgba(255,215,0,0.9), 0 0 40px rgba(0,108,53,0.9); }
     }
+    @media (max-width: 600px) {
+  #wlc {
+    font-size: 15vw; /* Larger text for mobile */
+    margin-top: 30%;
+  }
+}
 
 #slog {
-  position: absolute;
+  text-align: center;
   color: #FCD8A6;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 3rem;
