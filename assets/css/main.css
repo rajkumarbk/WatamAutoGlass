@@ -319,7 +319,7 @@ html[lang="en"] .navmenu .lang-ar { display: none; }
 /* navmenu - Mobile */
 @media (max-width: 600px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    color: #FCD8A6;
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
@@ -334,7 +334,7 @@ html[lang="en"] .navmenu .lang-ar { display: none; }
   }
 
   .navmenu ul {
-    display: flex;
+    display:flex;
     flex-direction: column;
     list-style: none;
     position: absolute;
@@ -422,6 +422,7 @@ html[lang="en"] .navmenu .lang-ar { display: none; }
     background: rgba(33, 37, 41, 0.8);
     transition: 0.4s;
   }
+  
 
   .mobile-nav-active .navmenu>ul {
     display: block;
