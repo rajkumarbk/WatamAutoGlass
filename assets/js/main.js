@@ -242,12 +242,14 @@ const langToggleBtn = document.getElementById("langToggle");
         bootstrapCss.disabled = true;
         bootstrapRtlCss.disabled = false;
         langToggleBtn.textContent = "ENG";
+        document.title = "وتم لزجاج السيارات";
       } else {
         document.documentElement.setAttribute("dir", "ltr");
         document.documentElement.setAttribute("lang", "en");
         bootstrapCss.disabled = false;
         bootstrapRtlCss.disabled = true;
         langToggleBtn.textContent = "عربي";
+        document.title = "Watam Auto Glass";
       }
     }
 
