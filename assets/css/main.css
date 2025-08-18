@@ -754,46 +754,6 @@ section,
   margin-bottom: 0;
 }
 
-#wlc {
-  text-align: center;
-  margin-top: 4%;
-  font-size: 4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg, #FCD8A6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    animation: fadeIn 2s ease-in-out;
-}
-    
-
-@keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-50px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-  @keyframes glow {
-      0% { text-shadow: 0 0 10px rgba(255,215,0,0.5), 0 0 20px rgba(0,108,53,0.5); }
-      100% { text-shadow: 0 0 20px rgba(255,215,0,0.9), 0 0 40px rgba(0,108,53,0.9); }
-    }
-  @media (max-width: 600px) {
-    #wlc {
-    font-size: 15vw; 
-    margin-top: 30%;
-  }  
-}
-
-#slog {
-  text-align: center;
-  color: #FCD8A6;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 3rem;
-  font-style: oblique;
-  margin-top: 15%;
-  left: 35%;
-  animation: fadeIn 2s ease-in-out;
-}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
