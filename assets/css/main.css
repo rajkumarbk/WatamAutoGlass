@@ -316,6 +316,7 @@ html[lang="en"] .navmenu .lang-en { display: inline-block; }
 html[lang="en"] .navmenu .lang-ar { display: none; }
 
 
+
 /* navmenu - Mobile */
 @media (max-width: 600px) {
   .mobile-nav-toggle {
