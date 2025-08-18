@@ -758,30 +758,30 @@ section,
   text-align: center;
   margin-top: 4%;
   font-size: 4rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      background: linear-gradient(90deg, #FCD8A6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: fadeIn 2s ease-in-out;
-    }
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #FCD8A6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    animation: fadeIn 2s ease-in-out;
+}
     
 
-    @keyframes fadeIn {
+@keyframes fadeIn {
       0% { opacity: 0; transform: translateY(-50px); }
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes glow {
+  @keyframes glow {
       0% { text-shadow: 0 0 10px rgba(255,215,0,0.5), 0 0 20px rgba(0,108,53,0.5); }
       100% { text-shadow: 0 0 20px rgba(255,215,0,0.9), 0 0 40px rgba(0,108,53,0.9); }
     }
-    @media (max-width: 600px) {
-  #wlc {
-    font-size: 15vw; /* Larger text for mobile */
+  @media (max-width: 600px) {
+    #wlc {
+    font-size: 15vw; 
     margin-top: 30%;
-  }
+  }  
 }
 
 #slog {
@@ -803,10 +803,10 @@ section,
   overflow: hidden;
   padding-bottom: 119px;
   background-image: url('../img/about/4.jpg');
-  background-size: cover;       /* makes the image cover the entire area */
-  background-repeat: no-repeat; /* prevents tiling */
-  background-position: center;  /* centers the image */
-  height: 100vh;                /* ensures it covers full viewport height */
+  background-size: cover;       
+  background-repeat: no-repeat;
+  background-position: center;  
+  height: 100vh;            
   margin: 0; 
 }
 
@@ -936,62 +936,6 @@ section,
 
   .hero .hero-content .hero-stats {
     justify-content: center;
-  }
-}
-
-/*--------------------------------------------------------------
-# Clients Section
---------------------------------------------------------------*/
-.clients {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.clients .clients-slider {
-  overflow: hidden;
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.clients .swiper-wrapper {
-  height: auto !important;
-  align-items: stretch;
-  transition-timing-function: linear;
-}
-
-.clients .swiper-slide {
-  height: auto;
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.clients .swiper-slide:last-child {
-  border-right: none;
-}
-
-.clients .client-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding: 40px;
-  height: 100%;
-}
-
-.clients .client-logo img {
-  max-width: 90%;
-  transition: 0.3s;
-  opacity: 0.5;
-  filter: grayscale(100);
-}
-
-.clients .client-logo img:hover {
-  filter: none;
-  opacity: 1;
-}
-
-@media (max-width: 640px) {
-  .clients .client-logo {
-    padding: 20px;
   }
 }
 
