@@ -1,15 +1,26 @@
 /* Fonts */
 :root {
-  --default-font: "Roboto", "bahij-janna" system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway", bahij-janna;
-  --nav-font: "Poppins", bahij-janna;
+  --default-font: "bahij-janna";
+  --heading-font: "bahij-janna";
+  --nav-font: "bahij-janna";
 }
+
 @font-face {
-  font-display: block;
   font-family: "bahij-janna";
-  src: url("../fonts/bahij-janna-reguler.ttf") format("ttf"),
-url("../fonts/bahij-janna-bold.ttf") format("ttf");
+  src: url("../fonts/bahij-janna-reguler.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: "bahij-janna";
+  src: url("../fonts/bahij-janna-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
