@@ -736,23 +736,25 @@
               <p class="lang lang-en">“Help us to serve you better"</p>
               <p class="lang lang-ar">"ساعدنا على خدمتك بشكل أفضل"</p>
 
-         <form name="contact" method="POST" netlify>
+         <form name="contact"  method="POST" netlify>
   <p>
-    <label>Name: <input type="text" name="name" /></label>
+    <label>Name: <input type="text" class="form-control" name="name" /></label>
   </p>
   <p>
-    <label>Email: <input type="email" name="email" /></label>
+    <label>Email: <input type="email" class="form-control" name="email" /></label>
   </p>
   <p>
-    <label>Subject: <input type="text" name="subject" /></label>
+    <label>Subject: <input type="text" class="form-control" name="subject" /></label>
   </p>
   <p>
-    <label>Message: <textarea name="message"></textarea></label>
+    <label>Message: <textarea name="message" class="form-control"></textarea></label>
   </p>
   <p>
-    <button type="submit" class="btn">Send</button>
+    <button type="submit" class="btn btn-success"><i class="fa fa-paper-plane"></i></button>
   </p>
 </form>
+
+
 
               <!-- <form  method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200" name="contact" data-netlify="true">
                 <div class="row gy-4">
