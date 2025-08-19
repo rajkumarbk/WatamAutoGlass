@@ -218,44 +218,44 @@ function myFunction() {
   element.classList.toggle("dark-background");
 }
 
-const langToggleBtn = document.getElementById("langToggle");
-const bootstrapCss = document.getElementById("bootstrap-css");
-const bootstrapRtlCss = document.getElementById("bootstrap-rtl-css");
-let currentLang = "ar";
+  const langToggleBtn = document.getElementById("langToggle");
+  const bootstrapCss = document.getElementById("bootstrap-css");
+  const bootstrapRtlCss = document.getElementById("bootstrap-rtl-css");
+  let currentLang = "ar";
 
-function setLanguage(lang) {
-  currentLang = lang;
+  function setLanguage(lang) {
+    currentLang = lang;
 
-  // Show/hide language text blocks
-  document.querySelectorAll(".lang").forEach((el) => {
-    if (el.classList.contains("lang-" + lang)) {
-      el.classList.add("active");
+    // Show/hide language text blocks
+    document.querySelectorAll(".lang").forEach((el) => {
+      if (el.classList.contains("lang-" + lang)) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
+
+    // Change direction and html lang attribute
+    if (lang === "ar") {
+      document.documentElement.setAttribute("dir", "rtl");
+      document.documentElement.setAttribute("lang", "ar");
+      bootstrapCss.disabled = true;
+      bootstrapRtlCss.disabled = false;
+      langToggleBtn.textContent = "ENG";
+      document.title = "وتم لزجاج السيارات";
     } else {
-      el.classList.remove("active");
+      document.documentElement.setAttribute("dir", "ltr");
+      document.documentElement.setAttribute("lang", "en");
+      bootstrapCss.disabled = false;
+      bootstrapRtlCss.disabled = true;
+      langToggleBtn.textContent = "عربي";
+      document.title = "Watam Auto Glass";
     }
+  }
+
+  langToggleBtn.addEventListener("click", () => {
+    setLanguage(currentLang === "en" ? "ar" : "en");
   });
 
-  // Change direction and html lang attribute
-  if (lang === "ar") {
-    document.documentElement.setAttribute("dir", "rtl");
-    document.documentElement.setAttribute("lang", "ar");
-    bootstrapCss.disabled = true;
-    bootstrapRtlCss.disabled = false;
-    langToggleBtn.textContent = "ENG";
-    document.title = "وتم لزجاج السيارات";
-  } else {
-    document.documentElement.setAttribute("dir", "ltr");
-    document.documentElement.setAttribute("lang", "en");
-    bootstrapCss.disabled = false;
-    bootstrapRtlCss.disabled = true;
-    langToggleBtn.textContent = "عربي";
-    document.title = "Watam Auto Glass";
-  }
-}
-
-langToggleBtn.addEventListener("click", () => {
-  setLanguage(currentLang === "en" ? "ar" : "en");
-});
-
-// Initialize
-setLanguage("ar");
+  // Initialize
+  setLanguage("ar");
