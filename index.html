@@ -736,22 +736,31 @@
               <p class="lang lang-en">“Help us to serve you better"</p>
               <p class="lang lang-ar">"ساعدنا على خدمتك بشكل أفضل"</p>
 
-         <form name="contact" method="POST" data-netlify="true">
+         <form name="contact" class="php-email-form" method="POST" data-netlify="true">
   <p>
-    <label>Your Name: <input type="text" name="name" /></label>
+  <input type="text" class="form-control lang lang-en" name="name" placeholder="Your Name" />
+   <input type="text" class="form-control lang lang-ar" name="name" placeholder="يرسل" />
   </p>
   <p>
-    <label>Your Email: <input type="email" name="email" /></label>
+    <input type="email" class="form-control lang lang-en" name="email" placeholder="Email"/>
+    <input type="email" class="form-control lang lang-ar" name="email" placeholder="يرسل"/>
   </p>
   <p>
-    <label>Subject: <input type="text" name="subject" /></label>
+    <input type="text" class="form-control lang lang-en" name="subject" placeholder="Subject"/>
+    <input type="text" class="form-control lang lang-ar" name="subject" placeholder="يرسل"/>
   </p>
   <p>
-    <label>Message: <textarea name="message"></textarea></label>
+  <textarea name="message" class="form-control lang lang-en" placeholder="يرسل"></textarea>
+  <textarea name="message" class="form-control lang lang-ar" placeholder="يرسل"></textarea>
   </p>
-  <p>
-    <button type="submit" class="btn">Send</button>
-  </p>
+  <div class="lang lang-en">
+                    <button type="submit" class="btn lang lang-en">Send Message</button>
+                  
+                  </div>
+                  <div class="lang lang-ar"><button type="submit" class="btn lang lang-ar">إرسال رسالة</button></div>
+                  
+
+                </div>
 </form>
 
               <!-- <form  method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200" name="contact" data-netlify="true">
