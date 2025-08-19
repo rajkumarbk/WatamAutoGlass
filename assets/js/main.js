@@ -1,5 +1,5 @@
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -94,7 +94,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -119,13 +119,13 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -134,8 +134,8 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -174,7 +174,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -214,48 +214,48 @@
 })();
 
 function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-background");
+  var element = document.body;
+  element.classList.toggle("dark-background");
 }
 
 const langToggleBtn = document.getElementById("langToggle");
-    const bootstrapCss = document.getElementById("bootstrap-css");
-    const bootstrapRtlCss = document.getElementById("bootstrap-rtl-css");
-    let currentLang = "ar";
+const bootstrapCss = document.getElementById("bootstrap-css");
+const bootstrapRtlCss = document.getElementById("bootstrap-rtl-css");
+let currentLang = "ar";
 
-    function setLanguage(lang) {
-      currentLang = lang;
+function setLanguage(lang) {
+  currentLang = lang;
 
-      // Show/hide language text blocks
-      document.querySelectorAll(".lang").forEach((el) => {
-        if (el.classList.contains("lang-" + lang)) {
-          el.classList.add("active");
-        } else {
-          el.classList.remove("active");
-        }
-      });
-
-      // Change direction and html lang attribute
-      if (lang === "ar") {
-        document.documentElement.setAttribute("dir", "rtl");
-        document.documentElement.setAttribute("lang", "ar");
-        bootstrapCss.disabled = true;
-        bootstrapRtlCss.disabled = false;
-        langToggleBtn.textContent = "ENG";
-        document.title = "وتم لزجاج السيارات";
-      } else {
-        document.documentElement.setAttribute("dir", "ltr");
-        document.documentElement.setAttribute("lang", "en");
-        bootstrapCss.disabled = false;
-        bootstrapRtlCss.disabled = true;
-        langToggleBtn.textContent = "عربي";
-        document.title = "Watam Auto Glass";
-      }
+  // Show/hide language text blocks
+  document.querySelectorAll(".lang").forEach((el) => {
+    if (el.classList.contains("lang-" + lang)) {
+      el.classList.add("active");
+    } else {
+      el.classList.remove("active");
     }
+  });
 
-    langToggleBtn.addEventListener("click", () => {
-      setLanguage(currentLang === "en" ? "ar" : "en");
-    });
+  // Change direction and html lang attribute
+  if (lang === "ar") {
+    document.documentElement.setAttribute("dir", "rtl");
+    document.documentElement.setAttribute("lang", "ar");
+    bootstrapCss.disabled = true;
+    bootstrapRtlCss.disabled = false;
+    langToggleBtn.textContent = "ENG";
+    document.title = "وتم لزجاج السيارات";
+  } else {
+    document.documentElement.setAttribute("dir", "ltr");
+    document.documentElement.setAttribute("lang", "en");
+    bootstrapCss.disabled = false;
+    bootstrapRtlCss.disabled = true;
+    langToggleBtn.textContent = "عربي";
+    document.title = "Watam Auto Glass";
+  }
+}
 
-    // Initialize
-    setLanguage("ar");
+langToggleBtn.addEventListener("click", () => {
+  setLanguage(currentLang === "en" ? "ar" : "en");
+});
+
+// Initialize
+setLanguage("ar");
