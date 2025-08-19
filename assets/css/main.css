@@ -2488,6 +2488,10 @@ section,
   margin-bottom: 0;
 }
 
+#faq-content {
+  text-align: center;
+}
+
 .faq .faq-container .faq-item h3 {
   font-weight: 600;
   font-size: 18px;
