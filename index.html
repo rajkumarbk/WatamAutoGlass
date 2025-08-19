@@ -736,33 +736,24 @@
               <p class="lang lang-en">“Help us to serve you better"</p>
               <p class="lang lang-ar">"ساعدنا على خدمتك بشكل أفضل"</p>
 
-              <form name="contact" method="POST" data-netlify="true">
+         <form name="contact" method="POST" data-netlify="true">
   <p>
-  <input type="text" name="name" class="form-control lang lang-en" placeholder="Your Name" required="">
-  <input type="text" name="name" class="form-control lang lang-ar" placeholder="اسمك" required="">
+    <label>Your Name: <input type="text" name="name" /></label>
   </p>
   <p>
-    <input type="email" class="form-control lang lang-en" name="email" placeholder="Your Email" required="">
-    <input type="email" class="form-control lang lang-ar" name="email" placeholder="بريدك الإلكتروني" required="">
+    <label>Your Email: <input type="email" name="email" /></label>
   </p>
   <p>
-    <input type="text" class="form-control lang lang-en" name="subject" placeholder="Subject" required="">
-                    <input type="text" class="form-control lang lang-ar" name="subject" placeholder="موضوع" required="">
-  </p>
- 
-  <p>
-   <textarea class="form-control lang lang-en" name="message" rows="6" placeholder="Message" required=""></textarea>
-                    <textarea class="form-control lang lang-ar" name="message" rows="6" placeholder="رسالة" required=""></textarea>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
   </p>
   <p>
-    <div class="lang lang-en">
-                    <button type="submit" class="btn lang lang-en">Send Message</button>
-                  
-                  </div>
-                  <div class="lang lang-ar"><button type="submit" class="btn lang lang-ar">إرسال رسالة</button></div>
-                  
-
-                </div>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit" class="btn">Send</button>
   </p>
 </form>
 
