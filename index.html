@@ -810,7 +810,8 @@
               <p class="lang lang-en">“Help us to serve you better"</p>
               <p class="lang lang-ar">"ساعدنا على خدمتك بشكل أفضل"</p>
 
-              <form name="contact-en" method="POST" class="lang lang-en" netlify>
+              <form name="contact-en" method="POST" class="lang lang-en" netlify accept-charset="UTF-8">
+                <input type="hidden" name="form-name" value="contact-en" />
                 <p>
                   <label>Name: <input type="text" class="form-control" name="name" /></label>
                 </p>
@@ -827,23 +828,26 @@
                   <button type="submit" class="btn btn-success"><i class="fa fa-paper-plane"></i></button>
                 </p>
               </form>
-              <form name="contact-ar" class="lang lang-ar" method="POST" netlify accept-charset="UTF-8">
+
+              <form name="contact-ar" method="POST" class="lang lang-ar" netlify accept-charset="UTF-8">
+                <input type="hidden" name="form-name" value="contact-ar" />
                 <p>
                   <label>موضوع: <input type="text" class="form-control" name="name" /></label>
                 </p>
                 <p>
-                  <label>موضوع: <input type="email" class="form-control" name="email" /></label>
+                  <label>البريد الإلكتروني: <input type="email" class="form-control" name="email" /></label>
                 </p>
                 <p>
-                  <label>موضوع: <input type="text" class="form-control" name="subject" /></label>
+                  <label>الموضوع: <input type="text" class="form-control" name="subject" /></label>
                 </p>
                 <p>
-                  <label>موضوع: <textarea name="message" class="form-control"></textarea></label>
+                  <label>الرسالة: <textarea name="message" class="form-control"></textarea></label>
                 </p>
                 <p>
                   <button type="submit" class="btn btn-success"><i class="fa fa-paper-plane"></i></button>
                 </p>
               </form>
+
 
             </div>
           </div>
