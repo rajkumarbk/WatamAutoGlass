@@ -21,6 +21,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "jf-flat";
   src: url("../fonts/jf-flat-bold.ttf") format("truetype");
@@ -28,6 +29,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "jf-flat";
   src: url("../fonts/jf-flat-regular.ttf") format("truetype");
@@ -201,7 +203,8 @@ h6 {
   margin-right: 0px;
 }
 
-.header .logo h1, h1 span {
+.header .logo h1,
+h1 span {
   font-family: var(--header-font);
   font-size: 30px;
   margin: 0;
