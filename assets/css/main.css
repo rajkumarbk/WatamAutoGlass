@@ -2,6 +2,7 @@
 :root {
   --default-font: "bahij-janna";
   --heading-font: "bahij-janna";
+  --header-font: "jf-flat";
   --nav-font: "bahij-janna";
 }
 
@@ -20,6 +21,20 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "jf-flat";
+  src: url("../fonts/jf-flat-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "jf-flat";
+  src: url("../fonts/jf-flat-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -30,7 +45,7 @@
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #f3bf7f;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #006C35;
+  --accent-color: #063320;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -167,7 +182,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #090a09;
+  --background-color: var(--accent-color);
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
@@ -182,21 +197,17 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 35px;
+  max-height: 55px;
   margin-right: 0px;
 }
 
-.header .logo h1 {
+.header .logo h1, h1 span {
+  font-family: var(--header-font);
   font-size: 30px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
+  color: #f3bf7f;
   padding-bottom: 5px;
-}
-
-.header .logo h1 span {
-  color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
-  font-style: italic;
 }
 
 .lang {
@@ -231,7 +242,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #000000;
+  --background-color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -271,7 +282,7 @@ h6 {
     color: var(--nav-hover-color);
     padding: 0px 0px 0px;
     font-size: 15px;
-    font-family: var(--nav-font);
+    font-family: var(--header-font-);
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -787,7 +798,7 @@ section,
   position: relative;
   overflow: hidden;
   padding-bottom: 119px;
-  background-image: url('../img/about/4.jpg');
+  background-image: url('../img/main-pic.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
